@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<div class="row main">
+    <div class="panel-heading">
+        <div class="panel-title text-center">
+            <h1 class="title">Student info</h1>
+            <hr />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Firstname</th>
+
+                <th>Lastname</th>
+
+                <th>Numetud</th>
+
+            </tr>
+            </thead>
+        <tbody>
+        <tr>
+            <td>{{ student.firstName }}</td>
+            <td>{{ student.lastName }}</td>
+            <td>{{ student.numEtud }}</td>
+            <td>
+                        <a  href="{{ path('student_edit', { 'id': student.id }) }}">Edit</a>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+            {{ form_start(delete_form) }}
+        <a type="button" class="btn btn-warning" href="{{ path('student_index') }}">Back</a>
+        <button type="submit" class="btn btn btn-danger" value="Delete">Delete</button>
+            {{ form_end(delete_form) }}
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<div class="row main">
+    <div class="panel-heading">
+        <div class="panel-title text-center">
+            <h1 class="title">Student Creation</h1>
+            <hr />
+        </div>
+    </div>
+    <div>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Create" >Create</button>
+        {{ form_end(form) }}
+
+   <!-- -->
+
+    <center>
+            <a href="{{ path('student_index') }}">Back to the list</a>
+        </center>
+{% endblock %}
