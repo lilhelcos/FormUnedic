@@ -3,7 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\AppBundle\Entity\Student as BaseStudent;
+
 
 
 /**
@@ -12,7 +12,7 @@ use FOS\AppBundle\Entity\Student as BaseStudent;
  * @ORM\Table(name="student")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\StudentRepository")
  */
-class Student extends BaseStudent
+class Student
 {
 
     /**
